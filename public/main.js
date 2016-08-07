@@ -1,17 +1,3 @@
-//add disconnect message, fix user typing feature
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $(document).ready(() => {
     let userName = prompt('Enter a user name.')
@@ -35,14 +21,11 @@ $(document).ready(() => {
     }
 
     let isTyping = (statement,length) => {
-        console.log(length);
         if (length == 0){
             $("#typing").html("")
-            console.log('LENGTH IS ZEROOOO');
             return
         }
         typing.html(statement)
-        console.log('INPUT NOT EMPTY', length);
     }
 
     socket.emit('newConnection', userName)
